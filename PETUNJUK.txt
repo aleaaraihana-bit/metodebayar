@@ -1,0 +1,34 @@
+PAKET TAMBAHAN QRIS DANA MANUAL - TOKOKITA
+
+File yang ditambahkan:
+1. kasir_pos_qris_manual.php
+   Salinan halaman kasir_pos.php yang ditambahkan opsi QRIS DANA MANUAL.
+   File kasir_pos.php asli TIDAK diubah.
+
+2. bayar_qris_manual.php
+   Halaman pembayaran yang menampilkan foto QRIS, total transaksi, nomor transaksi,
+   dan instruksi pembayaran. Transaksi disimpan dengan status Pending.
+
+3. uploads/pembayaran/qris.jpg
+   Foto QRIS yang kamu kirim.
+
+CARA MEMASANG:
+1. Ekstrak isi ZIP ke folder project htdocs/tokoku.
+2. Pastikan struktur folder menjadi:
+   tokoku/
+     kasir_pos_qris_manual.php
+     bayar_qris_manual.php
+     uploads/
+       pembayaran/
+         qris.jpg
+3. Buka halaman kasir tambahan:
+   http://localhost/tokoku/kasir_pos_qris_manual.php
+
+PENTING:
+- File kasir_pos.php, checkout.php, struk.php, dan file asli lainnya tidak ditimpa/diubah.
+- Halaman kasir tambahan ini tetap menggunakan functions.php, duitku_config.php,
+  database, stored procedure, navbar.php, dan tabel yang sama dengan halaman kasir asli.
+- Duitku tetap memakai channel dan alur aslinya.
+- QRIS pada foto adalah QRIS statis. Total tagihan ditampilkan otomatis di halaman,
+  tetapi pelanggan perlu memasukkan nominal tersebut jika aplikasi pembayaran meminta.
+- Status pembayaran manual tetap Pending sampai diverifikasi kasir/admin.
